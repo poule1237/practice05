@@ -1,44 +1,33 @@
 package com.javaex.ex04;
 
 public class Base {
-	private String afternoon;
-	private String day;
-	private String night;
-	
-
-	public void service(String state) {
-	}
-    public Base() {
-    	
+    
+    public void service(String state) {
+        
+        switch (state){
+        case "낮":
+            day();
+            break;
+        case "밤":
+            night();
+            break;
+        default :
+            afternoon();
+            break;
+        
+        }
     }
-	public String getAfternoon() {
-		return afternoon;
-	}
-	public void setAfternoon(String afternoon) {
-		this.afternoon = afternoon;
-	}
-	public String getDay() {
-		return day;
-	}
-	public void setDay(String day) {
-		this.day = day;
-	}
-	public String getNight() {
-		return night;
-	}
-	public void setNight(String night) {
-		this.night = night;
-	}
-	
-	
-   
-	
-    
-    
-    
-	}
 
-	
+    public void day() {
+        System.out.println("낮에는 열심히 수업듣자");
+    }
+
+    public void night() {
+        System.out.println("밤에는 숙면");
+    }
     
+    public void afternoon(){
+        System.out.println("오후도 낮과 마찬가지로 공부해야 합니다.");
+    }
 
-
+}
